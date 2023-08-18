@@ -1,0 +1,7 @@
+secretGenerator:
+- name: goosm-pass
+  literals:
+  - password=gosm2023
+resources:
+  - mysql-deployment.yaml
+  - goosm-deployment.yaml

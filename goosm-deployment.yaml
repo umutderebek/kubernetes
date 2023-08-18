@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: goosm
+  labels:
+    app: goosm
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: goosm
+    tier: frontend
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: goosmf-pv-claim
+  labels:
+    app: goosm
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goosm
+  labels:
+    app: goosm
+spec:
+  selector:
+    matchLabels:
+      app: goosm
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: goosm
+        tier: frontend
+    spec:
+      containers:
+      - image: php:8.1-apache
+        name: goosm
+        env:
+        - name: GOOSM_DB_HOST
+          value: goosm-mysql
+        - name: GOOSM_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: goosm-pass
+              key: password
+        - name: GOOSM_DB_USER
+          value: goosm
+        ports:
+        - containerPort: 80
+          name: goosm
+        volumeMounts:
+        - name: goosm-persistent-storage
+          mountPath: /var/www/html
+      volumes:
+      - name: goosm-persistent-storage
+        persistentVolumeClaim:
+          claimName: goosm-pv-claim
