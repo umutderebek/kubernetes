@@ -1,10 +1,9 @@
-# php + blade + custom mvc
+# GooSM Kubernetes how to use tutorial
 
-I'd switch to .core php cuz some saml project's not working properly on laravel.
-Maybe later I might be able to add some ORM & SAML technologies for this project
+Bu tutorial goosm product'ı için hazırlanmıştır.
 
 --
-To do List
+goosm
 --
 
 1-) Php exceptions & Error handlers<br>
