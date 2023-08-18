@@ -3,8 +3,8 @@
 Bu tutorial goosm product'ı için hazırlanmıştır.
 
 ```
-curl -LO https://github.com/umutderebek/kubernetes/blob/main/goosm-deployment.yaml
-```
+[curl -LO https://github.com/umutderebek/kubernetes/blob/main/goosm-deployment.yaml
+](https://github.com/umutderebek/kubernetes/blob/main/goosm-deployment.yaml)```
 ```
 curl -LO https://github.com/umutderebek/kubernetes/blob/main/mysql-deployment.yaml
 ```
