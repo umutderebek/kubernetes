@@ -9,7 +9,7 @@ curl -LO https://github.com/umutderebek/kubernetes/blob/main/goosm-deployment.ya
 curl -LO https://k8s.io/examples/application/wordpress/mysql-deployment.yaml
 ```
 ```
-curl -LO https://k8s.io/examples/application/wordpress/mysql-deployment.yaml
+curl -LO https://k8s.io/examples/application/wordpress/kustomization.yaml
 ```
 
 1-) After that you should check kustomization file for resources. Contains all the resources for deploying a goo and a MySQL database. You can apply the directory by
