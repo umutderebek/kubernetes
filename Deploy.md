@@ -24,5 +24,13 @@ You can see all pods with the code below
 kubectl get po -A
 ```
 
+4-) This containers names can be changed anyway , if you want to enter your container's you can use below this code 
+
+```
+kubectl exec -it demo-pod -- /bin/sh
+```
+
+5-) your folder ls/var/www/html you can deploy your webprojects
+
 
 
