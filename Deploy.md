@@ -1,13 +1,8 @@
-# GooSM Kubernetes how to use tutorial
+# GooSM Kubernetes how to Deploy tutorial
 
 Bu tutorial goosm product'ı için hazırlanmıştır.
 
-## Install dependencies for docker
+```
+curl -LO https://github.com/umutderebek/kubernetes/blob/main/goosm-deployment.yaml
+```
 
-
-```
-sudo apt update
-```
-```
-sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
-```
