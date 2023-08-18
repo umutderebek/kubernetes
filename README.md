@@ -64,3 +64,16 @@ mv ./kubectl ~/.local/bin/kubectl
 kubectl version --client
 ```
 if kubectl version gives our installation is successed.
+
+## Install dependencies for Minikube
+
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+
