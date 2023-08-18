@@ -11,7 +11,6 @@ goosm
 ```
 sudo apt update
 ```
-
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 ```
@@ -36,10 +35,39 @@ sudo apt install docker-ce -y
 sudo systemctl status docker
 ```
 
-
-
-## Install dependencies via Composer
+## Install dependencies for kubernetes
 
 ```
-composer update
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
+```
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+```
+
+```
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+```
+if validated result is : OK you can continue.
+
+```
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+install kubectl and we'd giving some permissions.
+```
+chmod +x kubectl
+mkdir -p ~/.local/bin
+mv ./kubectl ~/.local/bin/kubectl
+```
+
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
