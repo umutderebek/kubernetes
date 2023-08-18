@@ -9,6 +9,10 @@ kubectl apply -k ./
 
 2-) Now we should verify our secrets and Pvc's ( Persistent Volumes)
 ```
+kubectl get secrets
+```
+
+```
 kubectl get pvc
 ```
 
