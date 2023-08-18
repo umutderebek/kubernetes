@@ -32,5 +32,11 @@ kubectl exec -it demo-pod -- /bin/sh
 
 5-) your folder ls/var/www/html you can deploy your webprojects
 
+```
+minikube service --all
+```
+
+Enjoy
+
 
 
