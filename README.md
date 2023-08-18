@@ -72,6 +72,12 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
+after that if you got a error
+```
+sudo usermod -aG docker $USER
+sudo reboot
+```
+
 ```
 minikube start
 ```
